@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="icon" type="image/png" href="image/happy.png" />
+
+    <!-- FullCalendar CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="calendar.css" />
+
+    <!-- Custom Inline Styles -->
+    <style>
+      nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        z-index: 10;
+      }
+      .bg-nav {
+        background-color: rgba(216, 231, 180, 1) !important;
+        backdrop-filter: blur(3px);
+      }
+      .a-text {
+        color: #f76f88 !important;
+      }
+      .active {
+        border-bottom: 3px dotted #4475d0;
+      }
+      .form {
+        background-color: rgb(169, 227, 207);
+        color: #f8d9eb !important;
+      }
+      .form-control {
+        background-color: #e6fff7 !important;
+        color: #e83b8c !important;
+      }
+      .f-value {
+        border: none !important;
+        border-radius: 0 !important;
+      }
+      .f-value::placeholder {
+        color: #de82ad;
+        opacity: 1;
+      }
+      .btn-outline-success {
+        --bs-btn-color: #8ed6c1 !important;
+        --bs-btn-border-color: #8ed6c1 !important;
+        --bs-btn-hover-color: #e83b8c !important;
+        --bs-btn-hover-bg: #8ed6c1 !important;
+        --bs-btn-hover-border-color: #8ed6c1 !important;
+        --bs-btn-focus-shadow-rgb: 142, 214, 193 !important;
+        --bs-btn-active-color: #f8d9eb !important;
+        --bs-btn-active-bg: #8ed6c1 !important;
+        --bs-btn-active-border-color: #8ed6c1 !important;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+        --bs-btn-disabled-color: #8ed6c1 !important;
+        --bs-btn-disabled-bg: transparent !important;
+        --bs-btn-disabled-border-color: #8ed6c1 !important;
+        --bs-gradient: none !important;
+      }
+      .btn-primary {
+        --bs-btn-color: #d8e7b4 !important;
+        --bs-btn-bg: #f196a8 !important;
+        --bs-btn-border-color: #f196a8 !important;
+        --bs-btn-hover-color: #f5e5ed !important;
+        --bs-btn-hover-bg: #f14f70 !important;
+        --bs-btn-hover-border-color: #f14f70 !important;
+        --bs-btn-focus-shadow-rgb: 153, 128, 235 !important;
+        --bs-btn-active-color: #f5e5ed !important;
+        --bs-btn-active-bg: #f14f70 !important;
+        --bs-btn-active-border-color: #f196a8 !important;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+        --bs-btn-disabled-color: #f5e5ed !important;
+        --bs-btn-disabled-bg: #f196a8 !important;
+        --bs-btn-disabled-border-color: #f196a8 !important;
+      }
+      .f-h2 {
+        margin-top: 100px;
+        text-align: center;
+        font-family: "Sour Gummy", sans-serif;
+        color: #f14f70;
+      }
+      .chat-btn {
+        background-color: #f196a8;
+        border: none;
+        padding: 6px 12px;
+        margin-top: 5px;
+        border-radius: 6px;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-nav" id="to-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="main.html" target="_blank">
+          <img src="image/happy.png" alt="Happy" height="40px" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link a-text" href="main.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a-text" href="ava.html">Avatar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a-text" href="feeling.html">Feeling</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active a-text" href="cal.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a-text" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <form class="d-flex form" role="search">
+            <input
+              class="form-control me-0 f-value"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <h2 class="f-h2 reveal-me">Let's figure out how you feel today.</h2>
+    <div class="container text-center mt-4 reveal-me">
+      <div class="row">
+        <div class="col">
+          <div id="calendar"></div>
+        </div>
+
+        <div class="col-6">
+          <div id="chat">
+            <div class="c-container" style="height: 670px">
+              <div class="day">00-00-00</div>
+              <div class="date">00:00:00</div>
+
+              <div class="current-m">
+                <p>Current Mood</p>
+                <span class="mood-box">Mood</span>
+              </div>
+
+              <!-- Chat Box -->
+              <div class="chat-box">
+                <div class="box" id="chatBox"></div>
+                <input
+                  type="text"
+                  id="userInput"
+                  placeholder="Type a message..."
+                />
+                <button class="chat-btn" onclick="sendMessage()">Send</button>
+              </div>
+
+              <div class="change mt-3">
+                <h3>Feel Better?</h3>
+                <p>
+                  "Remember, every feeling is valid. If you want to talk more or
+                  need support, we're here for you!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="curve reveal-me">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <div class="c-col">
+              <img
+                src="image/wired-lineal-2742-logo-square-signal-hover-pinch.gif"
+                alt="logo"
+              />
+              <p>
+                Want to talk to someone? <br />
+                <a href="contact.html">Contact us</a> for support or just to
+                share your thoughts. <br />
+                Join our community to connect with others <br />
+                who are also tracking their moods and feelings.
+              </p>
+            </div>
+
+            <h5>Contact & Community</h5>
+          </div>
+          <div class="col">
+            <div class="c-col">
+              <img
+                src="image/wired-lineal-471-ebook-reader-hover-pinch.gif"
+                alt="book"
+              />
+              <p>
+                Looking for more help? <br />
+                Check out our resources page for tips and
+                <a href="https://www.samhsa.gov/mental-health">support links</a>
+                <br />
+                If you need urgent help, please reach out to a trusted friend,
+                family member, or professional.
+              </p>
+            </div>
+
+            <h5>Mental Health Resources</h5>
+          </div>
+          <div class="col">
+            <div class="c-col">
+              <img
+                src="image/wired-lineal-2815-ghost-hover-pinch (1).gif"
+                alt="ghost"
+              />
+              <p>
+                Your privacy is important. All your moods and notes are saved
+                only on your device.You are not alone. If you need to talk, our
+                team is just a message away.""Small steps matter.
+                <br />Celebrate your progress!
+              </p>
+            </div>
+
+            <h5>Privacy & Safety</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="reveal-me">
+      <div class="share">
+        <p>"Take care of your feelings—one mood at a time."</p>
+        <p>© 2025 Mood Tracker Project</p>
+        <a href="#to-top"
+          ><img
+            src="image/wired-lineal-259-share-arrow-hover-pointing.gif"
+            alt="top"
+            style="height: 50px"
+        /></a>
+        <br />
+        <a href="https://lordicon.com/">Icons by Lordicon.com</a>
+      </div>
+    </footer>
+
+    <!-- FullCalendar Script -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="cal.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      ScrollReveal().reveal(".reveal-me", {
+        distance: "50px",
+        duration: 1000,
+        easing: "ease-in-out",
+        origin: "bottom",
+        interval: 200,
+        reset: true,
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var calendarEl = document.getElementById("calendar");
+
+        // Load events and notes from localStorage
+        let savedEvents = JSON.parse(
+          localStorage.getItem("calendarEvents") || "[]"
+        );
+        let savedNotes = JSON.parse(
+          localStorage.getItem("calendarNotes") || "{}"
+        );
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+          displayEventTime: false,
+          headerToolbar: {
+            left: "",
+            center: "title",
+            right: "prev,next today",
+          },
+          events: savedEvents,
+          dateClick: function (info) {
+            // Get previous note for this date, if any
+            const prevNote = savedNotes[info.dateStr] || "";
+            const prevEmoji = prevNote ? getMoodEmoji(prevNote) + " " : "";
+            const note = prompt(
+              `Enter or edit your note/mood for ${info.dateStr}:\n${prevEmoji}${prevNote}`,
+              prevNote
+            );
+            if (note !== null) {
+              // Remove any previous event for this date
+              savedEvents = savedEvents.filter(
+                (ev) => ev.start !== info.dateStr
+              );
+
+              if (note.trim() !== "") {
+                // Add new event if note is not empty
+                const event = {
+                  title: getMoodEmoji(note), // Show emoji
+                  start: info.dateStr,
+                  allDay: true,
+                  textColor: "black",
+                };
+                savedEvents.push(event);
+                savedNotes[info.dateStr] = note;
+              } else {
+                // Remove note if input is empty
+                delete savedNotes[info.dateStr];
+              }
+
+              // Save to localStorage
+              localStorage.setItem(
+                "calendarEvents",
+                JSON.stringify(savedEvents)
+              );
+              localStorage.setItem("calendarNotes", JSON.stringify(savedNotes));
+
+              // Refetch events to update calendar
+              calendar.removeAllEvents();
+              calendar.addEventSource(savedEvents);
+            }
+          },
+        });
+
+        function getMoodEmoji(note) {
+          switch (note.toLowerCase()) {
+            case "happy":
+              return "😊";
+            case "sad":
+              return "😢";
+            case "angry":
+              return "😠";
+            case "calm":
+              return "🌿";
+            case "relaxed":
+              return "🧘";
+            case "anxious":
+              return "😰";
+            case "stressed":
+              return "😣";
+            case "bored":
+              return "🥱";
+            case "lonely":
+              return "😔";
+            case "guilty":
+              return "😓";
+            case "confused":
+              return "😕";
+            case "fearful":
+              return "😨";
+            default:
+              return "❔";
+          }
+        }
+
+        calendar.render();
+      });
+    </script>
+  </body>
+</html>

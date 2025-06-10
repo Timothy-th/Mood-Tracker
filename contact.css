@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #eaf4ca;
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  max-width: 900px;
+  margin: 50px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel {
+  flex: 1;
+  background: linear-gradient(to top, #f8dcdd, #d8e7b4);
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.left-panel h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #f14f70;
+  font-family: "Sour Gummy", sans-serif;
+}
+.left-panel img {
+  max-width: 100%;
+  height: auto;
+}
+.right-panel {
+  flex: 1;
+  background: linear-gradient(to top, #c8d898, #f5c3cb);
+  color: #f14f70;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.right-panel h2 {
+  margin-bottom: 20px;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.google,
+.discord,
+.facebook,
+.twitter {
+  background: #b2d93d;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+}
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px dashed #f22a52;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+}
+input:focus {
+  border-color: #f14f70;
+  box-shadow: 0 0 5px #f22a52;
+}
+.form-check {
+  display: flex;
+  gap: 5px;
+  text-align: center;
+}
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #f14f70;
+  cursor: pointer;
+  position: relative;
+  margin: 10px 0;
+  user-select: none;
+}
+.custom-checkbox input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.checkmark {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 2px solid #f22a52;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #b2d93d;
+  box-shadow: 0 0 10px #b2d93d;
+  border-color: #b2d93d;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark::after {
+  display: block;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+/* input[type="checkbox"]:checked {
+  accent-color: #f14f70;
+} */
+
+.signup-btn {
+  padding: 12px;
+  background: #f76f88;
+  color: #c8d898;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.signup-btn:hover {
+  box-shadow: 0 0 10px #b2d93d;
+  transform: scale(1.05);
+  background-color: #f14f70;
+}
+p,
+h2 {
+  text-align: center;
+}
+h2 {
+  color: #f14f70;
+  font-family: "Sour Gummy", sans-serif;
+  margin-bottom: 20px;
+}
+::placeholder {
+  color: #f22a52;
+  opacity: 0.7;
+}
+.foot {
+  text-align: center;
+  margin-top: 20px;
+  color: #f14f70;
+  font-size: 14px;
+  font-family: "Sour Gummy", sans-serif;
+  line-height: 30px;
+}
+.foot > p {
+  margin: 10px 0;
+  color: #f14f70;
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+}
+.lord {
+  color: #f22a52;
+}
+footer {
+  margin-bottom: 100px;
+}
+a {
+  color: #f14f70;
+  font-family: "Sour Gummy", sans-serif;
+}
+#user-avatar .avatar-base,
+#user-avatar .avatar-hair,
+#user-avatar .avatar-outfit,
+#user-avatar .avatar-accessoryI,
+#user-avatar .avatar-accessoryII {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 380px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+#user-avatar .avatar-container {
+  position: relative;
+  width: 260px;
+  height: 380px;
+  margin: -150px auto 0 auto;
+}
+#user-avatar img[src=""] {
+  display: none;
+}

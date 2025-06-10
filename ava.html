@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="image/happy.png" />
+    <title>Avatar</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="ava.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        z-index: 10;
+      }
+
+      .bg-nav {
+        background-color: rgba(216, 231, 180, 1) !important;
+        backdrop-filter: blur(3px);
+      }
+      .a-text {
+        color: #f76f88 !important;
+      }
+
+      .active {
+        border-bottom: 3px dotted #4475d0;
+      }
+      .form {
+        background-color: rgb(169, 227, 207);
+        color: #f8d9eb !important;
+      }
+      .form-control {
+        background-color: #e6fff7 !important;
+        color: #e83b8c !important;
+      }
+      .f-value {
+        border: none !important;
+        border-radius: 0 !important;
+      }
+      .f-value::placeholder {
+        color: #de82ad;
+        opacity: 1;
+      }
+      .btn-outline-success {
+        --bs-btn-color: #8ed6c1 !important;
+        --bs-btn-border-color: #8ed6c1 !important;
+        --bs-btn-hover-color: #e83b8c !important;
+        --bs-btn-hover-bg: #8ed6c1 !important;
+        --bs-btn-hover-border-color: #8ed6c1 !important;
+        --bs-btn-focus-shadow-rgb: 142, 214, 193 !important;
+        --bs-btn-active-color: #f8d9eb !important;
+        --bs-btn-active-bg: #8ed6c1 !important;
+        --bs-btn-active-border-color: #8ed6c1 !important;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+        --bs-btn-disabled-color: #8ed6c1 !important;
+        --bs-btn-disabled-bg: transparent !important;
+        --bs-btn-disabled-border-color: #8ed6c1 !important;
+        --bs-gradient: none !important;
+      }
+      .btn-primary {
+        --bs-btn-color: #d8e7b4 !important;
+        --bs-btn-bg: #f196a8 !important;
+        --bs-btn-border-color: #f196a8 !important;
+        --bs-btn-hover-color: #f5e5ed !important;
+        --bs-btn-hover-bg: #f14f70 !important;
+        --bs-btn-hover-border-color: #f14f70 !important;
+        --bs-btn-focus-shadow-rgb: 153, 128, 235 !important;
+        --bs-btn-active-color: #f5e5ed !important;
+        --bs-btn-active-bg: #f14f70 !important;
+        --bs-btn-active-border-color: #f196a8 !important;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+        --bs-btn-disabled-color: #f5e5ed !important;
+        --bs-btn-disabled-bg: #f196a8 !important;
+        --bs-btn-disabled-border-color: #f196a8 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-nav" id="to-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="main.html" target="_blank">
+          <img src="image/happy.png" alt="Happy" height="40px" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link a-text" href="main.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a-text active" href="ava.html">Avatar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a-text" href="feeling.html">Feeling</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link a-text" href="cal.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a-text" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <form class="d-flex form" role="search">
+            <input
+              class="form-control me-0 f-value"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div id="start" class="start text-center my-4 reveal-me">
+      <h1>Welcome to your Avatar Studio!</h1>
+      <p>
+        Here, you can create a custom avatar that reflects your mood and
+        personality.<br />
+        Choose a mood, customize the look, and watch your unique character come
+        to life.
+      </p>
+      <h2>So shall we start?</h2>
+    </div>
+
+    <div class="hr reveal-me"></div>
+    <div class="hr reveal-me"></div>
+
+    <div id="gender" class="reveal-me">
+      <h3>Choose your Gender</h3>
+      <button id="toMale" class="btn btn-primary mt-3" style="width: 150px">
+        Male
+      </button>
+      <button id="toFemale" class="btn btn-primary mt-3" style="width: 150px">
+        Female
+      </button>
+    </div>
+
+    <div class="container text-center reveal-me">
+      <div class="row">
+        <div id="avatar">
+          <div class="col-12 col-md-6">
+            <img
+              src="image/photo_2025-06-07_19-02-43.jpg"
+              alt="background"
+              style="height: 700px; width: auto"
+              class="avatar-background"
+            />
+            <div class="avatar-container male-avatar">
+              <img class="avatar-base" src="image/male.png" />
+              <img class="avatar-hair" src="" />
+              <img class="avatar-outfit" src="" />
+
+              <img class="avatar-accessoryI" src="" />
+              <img class="avatar-accessoryII" src="" />
+            </div>
+
+            <div class="avatar-container female-avatar">
+              <img class="avatar-base" src="image/female.png" alt="base" />
+              <img class="avatar-hair" src="" alt="hair" />
+              <img class="avatar-outfit" src="" alt="outfit" />
+
+              <img class="avatar-accessoryI" src="" alt="accessory 1" />
+              <img class="avatar-accessoryII" src="" alt="accessory 2" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6" id="avatar-control">
+          <div class="male">
+            <!-- Male avatar layers -->
+
+            <div class="m-tool">
+              <h3>Choose your Hair Style</h3>
+
+              <div class="hair">
+                <div class="item-grid">
+                  <button class="item-btn">
+                    <img src="image/mh1.png" alt="male-hair" class="item-img" />
+                  </button>
+                  <button class="item-btn">
+                    <img src="image/mh2.png" alt="male-hair" class="item-img" />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/mhh3.png"
+                      alt="male-hair"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img src="image/mh4.png" alt="male-hair" class="item-img" />
+                  </button>
+                  <button class="item-btn">
+                    <img src="image/mh5.png" alt="male-hair" class="item-img" />
+                  </button>
+                  <button class="item-btn">
+                    <img src="image/mh6.png" alt="male-hair" class="item-img" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="m-tool">
+              <h3>Choose your Outfit</h3>
+
+              <div class="outfit">
+                <div class="item-grid">
+                  <button class="item-btn">
+                    <img
+                      src="image/mc1.png"
+                      alt="male-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/mc2.png"
+                      alt="male-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/mc3.png"
+                      alt="male-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/mc4.png"
+                      alt="male-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/mc5.png"
+                      alt="male-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/mc6.png"
+                      alt="male-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/mc7.png"
+                      alt="male-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/mc8.png"
+                      alt="male-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/mc9.png"
+                      alt="male-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="female">
+            <!-- Female avatar layers -->
+
+            <div class="f-tool">
+              <h3>Choose your Hair Style</h3>
+
+              <div class="hair">
+                <div class="item-grid">
+                  <button class="item-btn">
+                    <img
+                      src="image/fh1.png"
+                      alt="female-hair"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/fh2.png"
+                      alt="female-hair"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/fh3.png"
+                      alt="female-hair"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/fh4.png"
+                      alt="female-hair"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/fh5.png"
+                      alt="female-hair"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/fh6.png"
+                      alt="female-hair"
+                      class="item-img"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="f-tool">
+              <h3>Choose your Outfit</h3>
+
+              <div class="outfit">
+                <div class="item-grid">
+                  <button class="item-btn">
+                    <img
+                      src="image/fc1.png"
+                      alt="female-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/fc2.png"
+                      alt="female-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/fc3.png"
+                      alt="female-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/fc4.png"
+                      alt="female-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/fc5.png"
+                      alt="female-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/fc6.png"
+                      alt="female-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/fc7.png"
+                      alt="female-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/fc8.png"
+                      alt="female-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                  <button class="item-btn">
+                    <img
+                      src="image/fc9.png"
+                      alt="female-outfit"
+                      class="item-img"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tool">
+            <h3>Choose your Accessory I</h3>
+
+            <div class="accessoryI">
+              <div class="item-grid">
+                <button class="item-btn">
+                  <img src="image/at1.png" alt="accessory" class="item-img" />
+                </button>
+                <button class="item-btn">
+                  <img src="image/at2.png" alt="accessory" class="item-img" />
+                </button>
+                <button class="item-btn">
+                  <img src="image/at3.png" alt="accessory" class="item-img" />
+                </button>
+                <button class="item-btn">
+                  <img src="image/at4.png" alt="accessory" class="item-img" />
+                </button>
+                <button class="item-btn">
+                  <img src="image/at5.png" alt="accessory" class="item-img" />
+                </button>
+                <button class="item-btn">
+                  <img src="image/at6.png" alt="accessory" class="item-img" />
+                </button>
+              </div>
+            </div>
+            <p>You can skip if you don't want.</p>
+            <button id="resetAccessory">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hr reveal-me"></div>
+
+    <div class="final reveal-me">
+      <h2>So is this you?</h2>
+      <div class="result"></div>
+      <a href="">
+        <button id="confirmAvatarBtn" class="btn btn-primary mt-3">
+          Yes,it is me.
+        </button>
+      </a>
+    </div>
+    <footer class="reveal-me">
+      <div class="share">
+        <p>"Take care of your feelings—one mood at a time."</p>
+        <p>© 2025 Mood Tracker Project</p>
+        <a href="#to-top"
+          ><img
+            src="image/wired-lineal-259-share-arrow-hover-pointing.gif"
+            alt="top"
+            style="height: 50px"
+        /></a>
+      </div>
+    </footer>
+
+    <script src="ava.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      ScrollReveal().reveal(".reveal-me", {
+        distance: "50px",
+        duration: 1000,
+        easing: "ease-in-out",
+        origin: "bottom",
+        interval: 200,
+        reset: true,
+      });
+    </script>
+  </body>
+</html>

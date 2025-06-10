@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feeling</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="feel.css" />
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+      nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        z-index: 10;
+      }
+
+      .bg-nav {
+        background-color: rgba(216, 231, 180, 1) !important;
+        backdrop-filter: blur(3px);
+      }
+      .a-text {
+        color: #f76f88 !important;
+      }
+
+      .active {
+        border-bottom: 3px dotted #4475d0;
+      }
+      .form {
+        background-color: rgb(169, 227, 207);
+        color: #f8d9eb !important;
+      }
+      .form-control {
+        background-color: #e6fff7 !important;
+        color: #e83b8c !important;
+      }
+      .f-value {
+        border: none !important;
+        border-radius: 0 !important;
+      }
+      .f-value::placeholder {
+        color: #de82ad;
+        opacity: 1;
+      }
+      .btn-outline-success {
+        --bs-btn-color: #8ed6c1 !important;
+        --bs-btn-border-color: #8ed6c1 !important;
+        --bs-btn-hover-color: #e83b8c !important;
+        --bs-btn-hover-bg: #8ed6c1 !important;
+        --bs-btn-hover-border-color: #8ed6c1 !important;
+        --bs-btn-focus-shadow-rgb: 142, 214, 193 !important;
+        --bs-btn-active-color: #f8d9eb !important;
+        --bs-btn-active-bg: #8ed6c1 !important;
+        --bs-btn-active-border-color: #8ed6c1 !important;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+        --bs-btn-disabled-color: #8ed6c1 !important;
+        --bs-btn-disabled-bg: transparent !important;
+        --bs-btn-disabled-border-color: #8ed6c1 !important;
+        --bs-gradient: none !important;
+      }
+      .btn-primary {
+        --bs-btn-color: #d8e7b4 !important;
+        --bs-btn-bg: #f196a8 !important;
+        --bs-btn-border-color: #f196a8 !important;
+        --bs-btn-hover-color: #f5e5ed !important;
+        --bs-btn-hover-bg: #f14f70 !important;
+        --bs-btn-hover-border-color: #f14f70 !important;
+        --bs-btn-focus-shadow-rgb: 153, 128, 235 !important;
+        --bs-btn-active-color: #f5e5ed !important;
+        --bs-btn-active-bg: #f14f70 !important;
+        --bs-btn-active-border-color: #f196a8 !important;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+        --bs-btn-disabled-color: #f5e5ed !important;
+        --bs-btn-disabled-bg: #f196a8 !important;
+        --bs-btn-disabled-border-color: #f196a8 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-nav" id="to-top">
+      <div class="container-fluid">
+        <!-- for logo -->
+        <a class="navbar-brand" href="main.html" target="_blank"
+          ><img src="image/happy.png" alt="Happy" height="40px"
+        /></a>
+
+        <!--buttom-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--link btn-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link a-text" aria-current="page" href="main.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a-text" href="ava.html">Avatar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a-text active" href="feeling.html">Feeling</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link a-text" href="cal.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a-text" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!--form-->
+          <form class="d-flex form" role="search">
+            <input
+              class="form-control me-0 f-value"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <h1 class="h1">Your Feelings Matter</h1>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <div class="card reveal-me">
+            <div id="understand">
+              <h1>
+                <img
+                  src="image/wired-lineal-1-cloud-hover-pinch.gif"
+                  alt="cloud"
+                />Understanding Our Feelings
+              </h1>
+              <p>
+                Feelings are like the weather inside us—sometimes sunny,
+                sometimes stormy. Learning to understand our emotions helps us
+                become more aware of ourselves and others. There’s no such thing
+                as a “bad” feeling—every emotion has a message and a reason for
+                being there.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card reveal-me">
+            <div id="matter">
+              <h1>
+                <img
+                  src="image/wired-lineal-1822-dandelion-hover-pinch.gif"
+                  alt="flower"
+                />
+                Why Feelings Matter
+              </h1>
+              <p>
+                Feelings are like the weather inside us—sometimes sunny,
+                sometimes stormy. Learning to understand our emotions helps us
+                become more aware of ourselves and others. There’s no such thing
+                as a “bad” feeling—every emotion has a message and a reason for
+                being there.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-b reveal-me">
+      <div id="big">
+        <h1>
+          <img
+            src="image/wired-lineal-1534-paper-boat-hover-pinch.gif"
+            alt="boat"
+          />
+          Big Feelings Are Okay
+        </h1>
+        <p>
+          Sometimes feelings can be overwhelming, like a huge wave crashing over
+          <br />
+          us. That’s okay. It's normal to feel sad, angry, scared, or even lost.
+          <br />
+          These big feelings are part of being human—and they will pass. You're
+          <br />
+          not alone in feeling them.
+        </p>
+      </div>
+    </div>
+    <div class="card-b reveal-me">
+      <div id="brain">
+        <h1>
+          <img src="image/wired-lineal-412-gift-hover-squeeze.gif" alt="" />
+          Feelings and the Brain
+        </h1>
+        <p>
+          Did you know that your brain processes feelings in many areas?
+          <br />
+          Emotions are connected to memories, body sensations, and thoughts.
+          <br />
+          That’s why we might feel butterflies when nervous or tears when
+          <br />
+          remembering something sad. Our brain and body work together to
+          <br />help us feel and react.
+        </p>
+      </div>
+    </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <div class="card-f reveal-me">
+            <div id="care">
+              <h1>
+                <img
+                  src="image/wired-lineal-20-love-heart-hover-heartbeat.gif"
+                  alt="heart"
+                />
+                How to Take Care of Your Feelings
+              </h1>
+              <p>
+                Taking care of your emotions is like taking care of a garden.
+                You need
+                <br />
+                time, attention, and kindness. Try writing your feelings down,
+                talking
+                <br />
+                to someone you trust, drawing, or taking a walk. Whatever helps
+                you
+                <br />
+                feel safe and heard is worth doing.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card reveal-me">
+            <div id="ok">
+              <h1>
+                <img
+                  src="image/wired-lineal-261-emoji-smile-hover-smile.gif"
+                  alt="smile"
+                />
+                You’re Allowed to Feel Everything
+              </h1>
+              <p>
+                It’s okay to feel happy. It’s okay to feel sad. It’s okay to
+                feel nothing at all. All emotions are valid. This page is a
+                reminder that your feelings matter, and that you are doing your
+                best—even when it doesn’t feel like it.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card-e reveal-me">
+            <div id="voice">
+              <h1>
+                <img
+                  src="image/wired-lineal-1865-shooting-stars-hover-pinch.gif"
+                  alt="star"
+                />
+                Every Feeling Has a Voice
+              </h1>
+              <p>
+                Every emotion you feel is trying to tell you something—like a
+                whisper from your heart. Joy may mean “this matters,” while
+                sadness might say “I need care.” Listening to these messages
+                helps you understand yourself better. Don’t rush to quiet
+                them—just listen with kindness.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="choose reveal-me">
+      <h2>Choose your current emotion.</h2>
+      <div class="emotion-grid">
+        <button class="emotion-btn" data-mood="happy">😊 <br />Happy</button>
+        <button class="emotion-btn" data-mood="sad">😢 <br />Sad</button>
+        <button class="emotion-btn" data-mood="angry">😠 <br />Angry</button>
+        <button class="emotion-btn" data-mood="relaxed">
+          🧘 <br />Relaxed
+        </button>
+        <button class="emotion-btn" data-mood="confused">
+          😕 <br />Confused
+        </button>
+        <button class="emotion-btn" data-mood="anxious">
+          😰 <br />Anxious
+        </button>
+        <button class="emotion-btn" data-mood="stressed">
+          😖 <br />Stressed
+        </button>
+        <button class="emotion-btn" data-mood="bored">😐 <br />Bored</button>
+        <button class="emotion-btn" data-mood="lonely">🥺 <br />Lonely</button>
+        <button class="emotion-btn" data-mood="calm">😌 <br />Calm</button>
+        <button class="emotion-btn" data-mood="guilty">😓 <br />Guilty</button>
+        <button class="emotion-btn" data-mood="fearful">
+          😨 <br />Fearful
+        </button>
+      </div>
+      <br />
+      <button class="btn btn-primary mt-3">Submit Emotion</button>
+    </div>
+    <footer>
+      <div class="share">
+        <p>"Take care of your feelings—one mood at a time."</p>
+        <p>© 2025 Mood Tracker Project</p>
+        <a href="#to-top"
+          ><img
+            src="image/wired-lineal-259-share-arrow-hover-pointing.gif"
+            alt="top"
+            style="height: 50px"
+        /></a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script>
+      ScrollReveal().reveal(".reveal-me", {
+        distance: "50px",
+        duration: 1000,
+        easing: "ease-in-out",
+        origin: "bottom",
+        interval: 200,
+        reset: true,
+      });
+
+      let selectedMood = null;
+
+      const moodButtons = document.querySelectorAll(".emotion-btn");
+      const submitBtn = document.querySelector(".btn.btn-primary");
+
+      // Add click event to all emotion buttons
+      moodButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Remove 'selected' class from all buttons
+          moodButtons.forEach((btn) => btn.classList.remove("selected"));
+
+          // Add 'selected' class to clicked one
+          button.classList.add("selected");
+
+          // Save the selected mood
+          selectedMood = button.getAttribute("data-mood");
+        });
+      });
+
+      // On submit, store mood and go to chat page
+      submitBtn.addEventListener("click", () => {
+        if (selectedMood) {
+          localStorage.setItem("selectedMood", selectedMood);
+          window.location.href = "cal.html"; // Change to your chat page
+        } else {
+          alert("Please select a mood before submitting.");
+        }
+      });
+    </script>
+  </body>
+</html>
