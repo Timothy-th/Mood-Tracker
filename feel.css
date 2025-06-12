@@ -176,3 +176,91 @@ a {
   color: #f14f70;
   font-family: "Sour Gummy", sans-serif;
 }
+
+@media (max-width: 480px) {
+  nav .navbar-brand img {
+    height: 30px;
+  }
+
+  nav .navbar-toggler {
+    font-size: 0.9rem;
+  }
+
+  .h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    width: 70% !important;
+  }
+
+  .container .row,
+  .container.text-center .row {
+    flex-direction: column;
+  }
+
+  .col {
+    margin-bottom: 1.5rem;
+  }
+
+  .card,
+  .card-b,
+  .card-f,
+  .card-e {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .card h1 img,
+  .card-b h1 img,
+  .card-f h1 img,
+  .card-e h1 img {
+    height: 40px;
+    margin-bottom: 0.5rem;
+  }
+
+  #big p,
+  #brain p,
+  #care p,
+  #ok p,
+  #voice p {
+    line-height: 1.5;
+    font-size: 0.9rem;
+  }
+
+  .emotion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .emotion-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  .choose h2 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  .btn-primary {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-control {
+    width: 100%;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+}

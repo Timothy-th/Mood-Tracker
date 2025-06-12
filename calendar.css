@@ -201,6 +201,7 @@ footer {
   line-height: 40px;
   font-family: "Quicksand", sans-serif;
   color: #c7351b;
+  font-size: 20px;
 }
 .c-col > img {
   position: relative;
@@ -209,4 +210,48 @@ footer {
 .col > h5 {
   font-family: "Sour Gummy", sans-serif;
   color: #f14f70;
+}
+@media (max-width: 480px) {
+  .container .row {
+    flex-direction: column;
+  }
+
+  .col,
+  .col-6 {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  #calendar {
+    margin-bottom: 2rem;
+  }
+
+  .c-container {
+    height: auto !important;
+  }
+
+  .chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  #userInput {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .chat-btn {
+    width: 100%;
+  }
+
+  .curve img {
+    height: 60px;
+  }
+
+  .f-h2 {
+    font-size: 1.5rem;
+    margin-top: 80px;
+  }
 }

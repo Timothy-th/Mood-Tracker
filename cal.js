@@ -364,19 +364,18 @@ function getAnxiousReply(userMessage) {
 
     {
       keywords: [
-        "panic",
         "overwhelmed",
         "freaking out",
         "can't breathe",
         "overthinking",
         "can't stop thinking",
-        "can't relax",
+        "can't ",
       ],
       reply:
         "🫧 Deep breaths, love. In through your nose... out through your mouth. You’re safe here with me.",
     },
     {
-      keywords: ["panic", "panicking", "freaking out"],
+      keywords: ["panic", "panicking", "freaking"],
       reply:
         "😨 Panic can feel so overwhelming. I’m here with you, let’s take it one step at a time.",
     },
@@ -415,13 +414,7 @@ function getAnxiousReply(userMessage) {
         "😰 Anxiety doesn’t always make sense, but your feelings still matter. I’m here to hold space for you.",
     },
     {
-      keywords: [
-        "can't sleep",
-        "night",
-        "dark",
-        "laying in bed",
-        "thoughts won't stop",
-      ],
+      keywords: ["can't sleep", "night", "dark", "laying", "thoughts", "stop"],
       reply:
         "🌙 Nights can make everything feel heavier. Let’s try to bring some peace into this moment together.",
     },
@@ -429,11 +422,6 @@ function getAnxiousReply(userMessage) {
       keywords: ["social anxiety", "shy", "awkward"],
       reply:
         "😳 Social situations can be tough. It’s okay to take your time and ease into them.",
-    },
-    {
-      keywords: ["future", "uncertain", "unknown"],
-      reply:
-        "🔮 The future can feel so uncertain. Let’s focus on what we can control right now.",
     },
   ];
 

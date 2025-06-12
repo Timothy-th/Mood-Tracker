@@ -312,3 +312,115 @@ a {
   color: #f14f70;
   font-family: "Sour Gummy", sans-serif;
 }
+@media (max-width: 480px) {
+  /* Center text and reduce spacing */
+  .header-div h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .header-div p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  /* .header-i {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  } */
+  .m-circle {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
+    left: 0 !important;
+    position: static !important;
+    margin: 0 auto !important;
+  }
+  .m-cir {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: none !important;
+    border-radius: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    position: static !important;
+  }
+
+  .m-cir > img {
+    max-width: 48px;
+    height: auto;
+    margin: 0 4px;
+    position: static;
+    display: inline-block;
+  }
+
+  .middle-p h2 {
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .middle-p p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .m-box {
+    height: 100px;
+  }
+  .l-curve {
+    height: auto !important;
+    min-height: unset !important;
+    padding-bottom: 2rem;
+  }
+  .l-curve .row {
+    flex-direction: column !important;
+  }
+  .l-curve .col {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1.5rem;
+  }
+  .l-curve .col:last-child {
+    margin-bottom: 2rem;
+  }
+  .main {
+    margin-top: 2rem !important;
+  }
+  .d-card .card {
+    width: 95vw !important;
+    margin: 0 auto;
+  }
+
+  /* Navigation spacing */
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  /* Reduce padding in sections if needed */
+  .header,
+  .middle {
+    padding: 1.5rem 1rem;
+  }
+  .a-btn {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto 0 auto !important;
+    width: fit-content !important;
+    position: static !important;
+  }
+}
