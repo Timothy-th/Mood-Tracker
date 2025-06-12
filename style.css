@@ -313,7 +313,6 @@ a {
   font-family: "Sour Gummy", sans-serif;
 }
 @media (max-width: 480px) {
-  /* Center text and reduce spacing */
   .header-div h1 {
     font-size: 1.5rem;
     text-align: center;
@@ -400,7 +399,6 @@ a {
     margin: 0 auto;
   }
 
-  /* Navigation spacing */
   .navbar-brand {
     font-size: 1.25rem;
   }
@@ -410,7 +408,6 @@ a {
     padding: 0.5rem;
   }
 
-  /* Reduce padding in sections if needed */
   .header,
   .middle {
     padding: 1.5rem 1rem;

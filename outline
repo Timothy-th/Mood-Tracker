@@ -20,6 +20,92 @@ font-family: "Sour Gummy", sans-serif; font-family: "Quicksand", sans-serif;
     </div>
   </div>
 </section>
+<style>
+  @media (max-width: 480px) {
+    #start > p {
+      font-size: 16px;
+      padding: 0 10px;
+    }
+    #start > h2,
+    #start > h3 {
+      font-size: 20px;
+    }
+    #gender {
+      font-size: 16px;
+      padding: 0 10px;
+    }
+
+    .avatar-container {
+      height: 400px;
+      width: 280px;
+      right: 0;
+      bottom: 0;
+    }
+    .item-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      margin: 1rem auto;
+    }
+    .item-btn,
+    #resetAccessory {
+      width: 120px;
+      height: 120px;
+      font-size: 1rem;
+    }
+    .tool > p {
+      font-size: 16px;
+    }
+    .final .result {
+      width: 90vw !important;
+      max-width: 220px !important;
+      min-width: 0 !important;
+      margin: 0 auto !important;
+      overflow: visible !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      position: static !important;
+      box-sizing: border-box !important;
+    }
+    .final .result img {
+      max-width: 100% !important;
+      height: auto !important;
+      display: block;
+      margin: 0 auto;
+    }
+    .result > div {
+      width: 160px;
+      height: 220px;
+      margin-left: 0;
+    }
+    .share {
+      font-size: 16px;
+      margin: 30px 10px;
+    }
+    #avatar-control {
+      height: auto;
+      padding: 10px;
+    }
+    .tool,
+    .accessoryI,
+    .accessoryII {
+      display: block !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      height: auto !important;
+    }
+    .item-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 0.5rem !important;
+    }
+  }
+  #back {
+    height: 700px;
+    width: auto;
+  }
+</style>
 const selectedSrc = card.querySelector("img").src;
 window.addEventListener("load", () => { const dateElement =
 document.querySelector(".date"); function updateTime() { const date = new
