@@ -113,7 +113,6 @@ document.getElementById("resetAccessory").addEventListener("click", () => {
     .forEach((btn) => btn.classList.remove("selected"));
 });
 
-////
 document.addEventListener("DOMContentLoaded", function () {
   const avatarState = {
     gender: null,
@@ -158,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
 `;
   }
 
-  // Step 1: Gender selection
+  // Gender selection
   document.getElementById("toMale").addEventListener("click", () => {
     avatarState.gender = "male";
     avatarState.hair = null;
@@ -175,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
     renderAvatar();
   });
 
-  // Step 2: Hair selection
+  //Hair selection
   document
     .querySelectorAll(".male .hair .item-btn img, .female .hair .item-btn img")
     .forEach((img) => {
@@ -185,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-  // Step 3: Outfit selection
+  //Outfit selection
   document
     .querySelectorAll(
       ".male .outfit .item-btn img, .female .outfit .item-btn img"
@@ -197,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-  // Step 4: Accessory I selection
+  //Accessory I selection
   document.querySelectorAll(".accessoryI .item-btn img").forEach((img) => {
     img.addEventListener("click", () => {
       avatarState.accessoryI = img.src;
@@ -205,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Optional: Reset button for Accessory I
+  //Reset button for Accessory I
   document.getElementById("resetAccessory").addEventListener("click", () => {
     avatarState.accessoryI = null;
     renderAvatar();
