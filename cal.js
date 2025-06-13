@@ -649,7 +649,7 @@ let currentRiddleAnswer = null;
 function getBoredReply(userMessage) {
   const lowerMsg = userMessage.toLowerCase();
 
-  // 🎲 Riddle Game Setup
+  //Riddle Game Setup
   const riddleGame = () => {
     const riddles = [
       {
@@ -704,22 +704,24 @@ function getBoredReply(userMessage) {
     return randomRiddle.question;
   };
 
-  // ✅ Handle answer guess
-  if (currentRiddleAnswer) {
-    if (lowerMsg.includes(currentRiddleAnswer.toLowerCase())) {
-      currentRiddleAnswer = null;
-      return "🎉 Correct! You're smart! Type 'play' to get another riddle!";
-    } else {
-      return "❌ Not quite. Want to try again or type 'play' for a new one?";
-    }
-  }
-
-  // ✅ Trigger riddle game if user says "play" or "game"
+  //  Trigger riddle game if user says "play" or "game"
   if (lowerMsg.includes("yes") || lowerMsg.includes("play")) {
     return riddleGame();
   }
 
-  // 💬 Keyword-based fun replies
+  if (currentRiddleAnswer) {
+    if (lowerMsg.includes(currentRiddleAnswer.toLowerCase())) {
+      currentRiddleAnswer = null;
+      return "🎉 Correct! You're smart! Type 'play' to get another riddle!";
+    } else if (!lowerMsg.includes("play") && !lowerMsg.includes("yes")) {
+      // User typed something else, exit riddle mode and show bored reply
+      currentRiddleAnswer = null;
+      return getBoredReply(); // or keywordResponses as appropriate
+    } else {
+      return "❌ Not quite. Want to try again or type 'play' for a new one?";
+    }
+  }
+  //  Keyword-based fun replies
   const keywordResponses = [
     {
       keywords: ["play", "game"],

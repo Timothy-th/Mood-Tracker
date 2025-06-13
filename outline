@@ -114,3 +114,4 @@ Date(); const hours = date.getHours().toString().padStart(2, "0"); const minutes
 date.getSeconds().toString().padStart(2, "0"); dateElement.textContent =
 `${hours}:${minutes}:${seconds}`; } updateTime(); setInterval(updateTime, 1000);
 });
+
